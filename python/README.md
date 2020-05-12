@@ -17,14 +17,20 @@ Python script which takes a Lichess team-id as input and outputs links to any en
     - Python 3
     - Python modules "ndjson" and "requests"
 
+    Quick instructions:
+    # apt install python3
+    # apt install python3-pip
+    # pip3 install ndjson
+    # pip3 install requests
+
 ## Example how to run the script in a fresh Ubuntu Docker container
 
     user@localhost$ docker run -it ubuntu
 
     root@container$ apt update && apt upgrade
-    root@container$ apt install wget
-    root$container$ wget https://raw.githubusercontent.com/tors42/teamchecker/master/teamchecker.py
-    root$container$ chmod +x teamchecker.py
     root$container$ apt install python3 python3-pip
     root$container$ pip3 install ndjson requests
+    root@container$ apt install curl
+    root$container$ curl -JO https://raw.githubusercontent.com/tors42/teamchecker/master/python/teamchecker.py
+    root$container$ chmod +x teamchecker.py
     root$container$ ./teamchecker.py
