@@ -33,7 +33,7 @@ you can install them with the package manager **apt** (or **apt-get**):
 
 Then you can fetch the script with **curl**, and make it executable (**chmod**), and run it **./teamchecker.sh**:
 
-    user@ubuntu$ curl -JO https://raw.githubusercontent.com/tors42/teamchecker/master/bash/teamchecker.sh
+    user@ubuntu$ curl -JO https://raw.githubusercontent.com/tors42/teamchecker/main/bash/teamchecker.sh
     user@ubuntu$ chmod +x teamchecker.sh
     user@ubuntu$ ./teamchecker.sh
 
@@ -43,6 +43,6 @@ Then you can fetch the script with **curl**, and make it executable (**chmod**),
 
     root@ubuntu$ apt update && apt upgrade
     root@ubuntu$ apt install jq curl
-    root$ubuntu$ curl -JO https://raw.githubusercontent.com/tors42/teamchecker/master/bash/teamchecker.sh
+    root$ubuntu$ curl -JO https://raw.githubusercontent.com/tors42/teamchecker/main/bash/teamchecker.sh
     root$ubuntu$ chmod +x teamchecker.sh
     root$ubuntu$ ./teamchecker.sh

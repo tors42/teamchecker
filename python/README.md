@@ -31,6 +31,6 @@ Python script which takes a Lichess team-id as input and outputs links to any en
     root$container$ apt install python3 python3-pip
     root$container$ pip3 install ndjson requests
     root@container$ apt install curl
-    root$container$ curl -JO https://raw.githubusercontent.com/tors42/teamchecker/master/python/teamchecker.py
+    root$container$ curl -JO https://raw.githubusercontent.com/tors42/teamchecker/main/python/teamchecker.py
     root$container$ chmod +x teamchecker.py
     root$container$ ./teamchecker.py
