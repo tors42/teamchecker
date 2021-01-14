@@ -81,18 +81,18 @@ for teamId in teamIds:
     #users = lookupUsersFromFile('/path/to/file/containing/users')
 
     if users:
-        engine_users = []
+        tosv_users = []
         for user in users:
-            if 'engine' in user:
-                if user['engine']:
-                    engine_users.append(user['url'])
+            if 'tosViolation' in user:
+                if user['tosViolation']:
+                    tosv_users.append(user['url'])
 
-        if len(engine_users) > 0:
-            print('Team ' + teamId + ' has', len(engine_users), 'engine user/s (out of', len(users), 'members.)')
+        if len(tosv_users) > 0:
+            print('Team ' + teamId + ' has', len(tosv_users), 'ToS warned user/s (out of', len(users), 'members.)')
             print('')
-            print(engine_users)
+            print(tosv_users)
         else:
-            print('No engine users found in ' + teamId + ' (out of', len(users), 'members.)')
+            print('No ToS warned users found in ' + teamId + ' (out of', len(users), 'members.)')
 
     print()
     time.sleep(1)

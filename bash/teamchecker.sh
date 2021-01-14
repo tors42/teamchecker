@@ -31,13 +31,13 @@ NUMUSERS=$(cat ${TMPFILE} | wc -l)
 
 [[ $NUMUSERS -eq 0 ]] && echo "Didn't find any team members for team ${TEAMID}" && rm ${TMPFILE} && exit
 
-ENGINEUSERS=$(cat ${TMPFILE} | jq --raw-output 'select(.engine == true ) | .url')
+TOSVUSERS=$(cat ${TMPFILE} | jq --raw-output 'select(.tosViolation == true ) | .url')
 rm ${TMPFILE}
 
-if [ -z "${ENGINEUSERS}" ]; then
-    echo "No found engine users in team ${TEAMID} (of ${NUMUSERS} members)"
+if [ -z "${TOSVUSERS}" ]; then
+    echo "No found ToS warned users in team ${TEAMID} (of ${NUMUSERS} members)"
 else
-    NUMENGINEUSERS=$(echo "${ENGINEUSERS}" | wc -l)
-    echo "Found ${NUMENGINEUSERS} engine users found in team ${TEAMID} (of ${NUMUSERS} members)"
-    echo "${ENGINEUSERS}"
+    NUMTOSVUSERS=$(echo "${TOSVUSERS}" | wc -l)
+    echo "Found ${NUMTOSVUSERS} ToS warned users found in team ${TEAMID} (of ${NUMUSERS} members)"
+    echo "${TOSVUSERS}"
 fi

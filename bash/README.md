@@ -1,6 +1,6 @@
 # teamchecker.sh
 
-Bash script which takes a Lichess team-id as input and outputs links to any engine users in the team.
+Bash script which takes a Lichess team-id as input and outputs links to any ToS warned users in the team.
 
 ## Usage
 

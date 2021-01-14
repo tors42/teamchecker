@@ -1,6 +1,6 @@
 # teamchecker
 
-Python script which takes a Lichess team-id as input and outputs links to any engine users in the team.
+Python script which takes a Lichess team-id as input and outputs links to any ToS warned users in the team.
 
 ## Usage
 
